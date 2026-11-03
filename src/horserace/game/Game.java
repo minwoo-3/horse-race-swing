@@ -1,4 +1,10 @@
-package horserace;
+package horserace.game;
+
+import horserace.model.horse.Horse;
+import horserace.model.horse.LuckyHorse;
+import horserace.model.horse.SprinterHorse;
+import horserace.model.horse.SteadyHorse;
+import horserace.model.player.Player;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,12 +12,11 @@ import java.util.Scanner;
 /** 전체 게임 흐름: 베팅 -> 레이스 -> 정산 -> 반복. */
 public class Game {
     private final Scanner scanner = new Scanner(System.in);
-    private final Player player = new Player();
+    private final Player player = new Player("플레이어");
     private final List<Horse> horses = List.of(
-            new Horse(1, "번개", 2.0),
-            new Horse(2, "질풍", 3.0),
-            new Horse(3, "흑마", 4.5),
-            new Horse(4, "백설", 6.0)
+            new SprinterHorse(1, "번개"),
+            new SteadyHorse(2, "꾸준이"),
+            new LuckyHorse(3, "럭키")
     );
 
     public void start() {

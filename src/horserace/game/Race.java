@@ -1,5 +1,6 @@
-package horserace;
+package horserace.game;
 
+import horserace.model.horse.Horse;
 import java.util.List;
 import java.util.Random;
 

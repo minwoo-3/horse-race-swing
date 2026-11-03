@@ -2,5 +2,5 @@
 # 컴파일 후 실행
 set -e
 cd "$(dirname "$0")"
-javac -encoding UTF-8 -d out src/horserace/*.java
+javac -encoding UTF-8 -d out $(find src -name "*.java")
 java -cp out horserace.Main
