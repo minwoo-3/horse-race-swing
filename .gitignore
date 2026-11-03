@@ -3,3 +3,7 @@ out/
 .idea/
 *.iml
 .DS_Store
+
+# Character photos stay local (may show real people)
+images/*
+!images/README.md
